@@ -50,7 +50,7 @@ public class DataAnnoProcessor extends AbstractProcessor {
                             .map(t -> (JCTree.JCVariableDecl)t)
                             .forEach(t -> {
                                 jcClassDecl.defs = jcClassDecl.defs.prepend(genGetterMethod(t));
-                                jcClassDecl.defs = jcClassDecl.defs.prepend(genGetterMethod(t));
+                                jcClassDecl.defs = jcClassDecl.defs.prepend(genSetterMethod(t));
                             });
                     super.visitClassDef(jcClassDecl);
                 }
