@@ -15,6 +15,10 @@ import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
 import java.util.Set;
+
+/**
+ *  额外需要创建文件：resources/META-INF/services/javax.annotation.processing.Processor, 将该注解处理类的全路径core.bytecode.processor.DataAnnoProcessor写入，这样才能生效
+ */
 // 只处理类全限定名为 core.bytecode.processor.Data 的注解
 @SupportedAnnotationTypes("core.bytecode.processor.Data")
 // 最高支持java8编译出的类文件
